@@ -1,0 +1,19 @@
+program untit;
+uses crt,dos;
+function LO(w:word):string;
+var
+s:string;
+BEGIN
+ str(w,s);
+ if w<10 then
+ LO:='0'+s
+END;
+var
+hora,minuto,segundo,milisegundo:word;
+begin
+clrscr;
+GetTime(hora,minuto,segundo,milisegundo);
+write(' La Hora Es : ');
+write(LO(hora),':',LO(minuto),':',LO(segundo));
+readkey;
+end.
